@@ -1,0 +1,416 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        .container {
+            width: 1200px;
+            margin: 0px auto;
+        }
+        p {
+            font-size: 18px;
+        }
+        ul {
+            list-style: none;
+        }
+        ul li a{
+            text-decoration: none;
+            color: grey;
+        }
+        .menu ul li {
+            display: inline-block;
+            padding: 10px 20px;
+            text-transform: uppercase;
+        }
+        a:hover {
+            color: #818753;
+        }
+        .menu {
+            margin-top: 30px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .menu ul  img {
+            margin-bottom: -20px;
+            margin-left: 15px;
+        }
+        .menu img:hover{
+            opacity: 0;
+        }
+        .slice {
+            margin-top: 30px;
+            position: relative;
+        }
+        .slice .left {
+            position: absolute;
+            left: 75px;
+            top: 110px;
+            width: 400px;
+        }
+        .slice .left h2 {
+            font-size: 80px;
+            color: hotpink;
+        }
+        .slice .left .btn {
+            padding: 15px 55px;
+            color:#fff;
+            background-color: hotpink;
+            border-radius: 30px;
+            border: none;
+            text-transform: uppercase;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .hidden {
+            background-color: rgba(0, 0, 0, 0);
+            border: none;
+            font-size: 40px;
+            cursor: pointer;
+            margin-right: 20px;
+            color: #fff ;
+            
+        }
+        .slice .right {
+            position: absolute;
+            bottom: 100px;
+            right: 90px;
+        }
+        .slice .left .btn:hover {
+            background: cyan;
+        }
+        .hidden:hover {
+            color: gray;
+        }
+        .banner {
+            margin-top: 20px;
+        }
+        .banner-left {
+            width: 680px;
+            height: 600px;
+            margin-right: 20px;
+            float: left;
+            background-image: url('banner_3.jpg');
+            background-size: cover;
+            position: relative;
+        }
+        .banner-right {
+            width: 500px;
+            height: 700px;
+            float: left;
+            background-image: url('banner_4.jpg');
+            background-size: cover;
+            position: relative;
+        }
+        .text {
+            position: absolute;
+            left: 400px;
+            bottom: 40px;
+            font-size: 50px;
+        }
+        .View1 {
+            position: absolute;
+            bottom: 50px;
+            left: 400px;
+            text-transform: uppercase;
+            color: #818753;
+        }
+        .text1 {
+            position: absolute;
+            left: 45px;
+            top: 155px;
+            font-size: 50px;
+        }
+        .View2 {
+            position: absolute;
+            bottom: 300px;
+            left: 46px;
+            text-transform: uppercase;
+            color: #818753;
+        }
+        #title {
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+        .sp {
+            width: 285px;
+            margin-left: 20px;
+            float: left;
+            overflow: hidden; /*ảnh kích thước quá 285px lên dùng overflow để ẩn phần tràn*/
+        }
+        .sp:first-child{
+            margin-left: 0;
+        }
+        .sp img {
+            transform: scale(1.5);
+        }
+        .sp img:hover{
+            transform: scale(1)
+        }
+        .tensp{
+            float: left;
+            width: 285px;
+            
+            margin-left: 20px;
+        }
+        .tensp:first-child{
+            margin-left: 0;
+        }
+        .tensp p {
+            color: darkorchid;
+            font-size: 20px;
+            text-align: center;
+        }
+        .gia {
+            float: left;
+            width: 285px;
+            
+            margin-left: 20px;
+            font-size: 30px;
+            text-align: center;
+            margin-top: 0px;
+        }
+        .gia:first-child{
+            margin-left: 0;
+        }
+        .mua {
+            width: 285px;
+            margin-left: 20px;
+            float: left;
+            
+            text-align: center;
+        }
+        .mua:first-child{
+           margin-left: 0px;
+        }
+        
+     
+        .mua {
+            text-align: center;
+        }
+        .mua  .button{
+            padding: 10px 30px;
+            border-radius: 40px;
+            border: none;
+            background: cornflowerblue;
+            color: #fff;
+            font-size: 15px;
+        }
+        .mua  .button:hover{
+            background-color: blueviolet;
+        }
+        #title {
+            color: burlywood;
+            font-family:'Times New Roman', Times, serif;
+        }
+        #banner1 {
+            background-image: url('banner_1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 600px;
+            margin-right: 20px;
+            height: 350px;
+            float: left;
+            position: relative;
+        }
+        #banner2 {
+            background-image: url('banner_2.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            width: 500px;
+            height: 470px;
+            float: left;
+            position: relative;
+        }
+        .text3 {
+            position: absolute;
+            left: 440px;
+            bottom: 20px;
+            font-size: 50px;
+        }
+        .View3 {
+            position: absolute;
+            bottom: 30px;
+            left: 440px;
+            text-transform: uppercase;
+            color: #818753;
+        }
+        .text4 {
+            position: absolute;
+            left: 380px;
+            top: 155px;
+            font-size: 50px;
+        }
+        .View4 {
+            position: absolute;
+            bottom: 300px;
+            left: 380px;
+            text-transform: uppercase;
+            color: #818753;
+        }
+        .banner-left,.banner-right {
+            margin-top: 20px;
+        }
+        .about {
+          width: 400px;
+          float: left;
+        }
+        .contact{
+          width: 300px;
+          float: left;
+        }
+        .link{
+          width: 500px;
+          float: left;
+        }
+        .about #sm {
+           width: 70px;
+           height: 38px;
+           margin-left: 20px;
+           float: left;
+        }
+        .about #p1 {
+          width: 220px;
+          float: left;
+          color: deeppink;
+          margin-left: 20px;
+        }
+        .w2  {
+            transition: 1s;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+         <div class="menu">
+             <ul>
+                 <li><a href="">Home</a></li>
+                 <li><a href="">Jackets</a></li>
+                 <li><a href="">Blazers</a></li>
+                 <a href=""><img src="logo_2.png" alt=""></a>
+                 <li><a href="">Store</a></li>
+                 <li><a href="">Page</a></li>
+                 <li><a href="">Dresses</a></li>
+             </ul>
+         </div>
+    
+    <div class="slice">
+        <img src="slider.jpg" width="1200px" id="1">
+        <div class="left">
+            <h2><i>Free</i> Shopping</h2>
+            <p>Gucci là thương hiệu thời trang có triết lý thiết kế hiện đại và đổi mới, với tinh thần quý tộc và kỹ nghệ thủ công bậc thầy mang tính di sản của Ý.</p>
+            <button class="btn">Click</button>
+        </div>
+        <div class="right">
+            <button class="hidden"><</button>
+            <button class="hidden">></button>
+        </div>
+    </div>
+    <div class="banner">
+       <a class="banner-left" href="">
+         <p class="text">Spring <b>Summer</b></p>
+         <p class="View1">View all</p>
+       </a>
+       <a class="banner-right" href="">
+         <p class="text1">Free<br/><b>Shipping</b></p>
+         <p class="View2">On all orders<br/>Over 50$!</p>
+       </a>
+    </div>
+    <div class="content">
+        <p id="title"><b>Danh mục sản phẩm</b></p>
+        <div class="layer1">
+            <a href="" class="sp"><img src="item_1.jpg">
+            </a>
+            <a href="" class="sp"><img src="item_2.jpg">
+            </a>
+            <a href="" class="sp"><img src="item_3.jpg">
+            </a>
+            <a href="" class="sp"><img src="item_4.jpg">
+            </a>
+        </div>
+        <div class="layer2">
+            <div class="tensp">
+                <p>Ao len đẹp tôn dáng</p>
+            </div>
+            <div class="tensp">
+                <p>Ao len đẹp tôn dáng</p>
+            </div>
+            <div class="tensp">
+                <p>Ao len đẹp tôn dáng</p>
+            </div>
+            <div class="tensp">
+                <p>Ao len đẹp tôn dáng</p>
+            </div>
+        </div>
+        <div class="layer3">
+            <p class="gia">100$</p>
+            <p class="gia">200$</p>
+            <p class="gia">300$</p>
+            <p class="gia">400$</p>
+        </div>
+        <div class="layer4">
+            <div class="mua">
+                <button class="button">Mua luôn</button>
+            </div>
+            <div class="mua">
+                <button class="button">Mua luôn</button>
+            </div>
+            <div class="mua">
+                <button class="button">Mua luôn</button>
+            </div>
+            <div class="mua">
+                <button class="button">Mua luôn</button>
+            </div>
+        </div>
+    </div>
+    <div class="banner">
+        <a class="banner-left" id="banner1" href="">
+            <p class="text3">Best <b>Shoes</b></p>
+            <p class="View3">View all</p>
+          </a>
+          <a class="banner-right" id = "banner2" href="">
+            <p class="text4">Top<br/><b>Bags</b></p>
+            <p class="View4">On all orders<br/>Over 50$!</p>
+          </a>
+    </div>
+    <div class="footer"> 
+       <div class="about">
+           <h2>About Us</h2>
+         <a id="sm" href=""><img src="logo_2.png" width=""></a>
+         <p id="p1">SIGN UP FOR GUCCI UPDATES
+            By entering your email address below, you consent to receiving our newsletter with access to our latest collections, events and initiatives. </p>
+
+       </div>
+       <div class="contact">
+           <h2>Contact</h2>
+           <p><span>Email:</span>ww3ww32@gmail.com</p>
+           <p><span>Tel:</span>0839178738</p>
+    </div>
+    <div class="link">
+           <p>zmisthemes &copy; All Right Reserved</p>
+    </div>
+    </div>
+    </div>
+    <script>
+        var current_img = 1;
+        var bnt = $('.hidden')[1];
+        $(bnt).click(function(){
+            if(current_img==1){
+                $('#1').attr('src','slider.jpg');
+                current_img=2;
+            }else{
+                $('#1').addClass('w2');
+                $('#1').attr('src','anhbia2.jpg')
+                current_img=1;
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<style>
+    [class$="small"] {
+        font-size: 60px;
+        color: orangered;
+    }
+    .logo {
+        font-size: 180px;
+        padding-top: 40px;
+        padding-left: 50px;
+        color: cornflowerblue;
+        margin: 0 auto;
+    }
+    .slideanim {
+      visibility: hidden;
+    }
+    .slide {
+      animation-name: slide;
+      animation-duration: 1s;
+      visibility:visible;
+    }
+    @keyframes slide {
+      0% {
+        opacity: 0;
+        transform: translateY(70%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0%);
+      }
+    }
+    .thumbnail {
+      padding: 0 0 15px 0;
+      border: none;
+      
+    }
+    .thumbnail img {
+      
+      margin-bottom: 10px;
+    }
+    .panel {
+      border: 1px solid teal;
+      border-radius: 0 !important;
+      transition: box-shadow 0.5s;
+    };
+    .panel:hover {
+      box-shadow: 15px 15px 18px  red !important;
+    }
+    .navbar li:hover {
+         background-color: royalblue;
+         border-radius: 30px;
+    }
+    @media screen and (max-width: 768px){
+        .col-sm-4{
+            text-align: center;
+            margin: 0 auto;
+        }
+    }
+</style>
+</head>
+<body id="body" data-spy="scroll" data-target=".navbar">
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="#">Apptech Việt Nam</a>
+      </div>
+      <ul class="nav navbar-nav">
+        <li><a href="#">Trang chủ</a></li>
+        <li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Thông tin <span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Tuyển sinh</a></li>
+            <li><a href="#">Sinh viên</a></li>
+            <li><a href="#">Khóa học</a></li>
+          </ul>
+        </li>
+        <li><a href="#services">Dich vụ</a></li>
+        <li><a href="#portfolio">Dự án tiêu biểu</a></li>
+        <li><a href="#carouselExampleControls">Y kiến khách hàng</a></li>
+        <li><a href="#money">Bảng giá khóa học</a></li>
+        <li><a href="#contact">Liên hệ</a></li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+      </ul>
+    </div>
+  </nav>
+    
+  
+    <div class="jumbotron text-center" style="background-color:coral; color: #FFF;" >
+        <h1>MYCLASS.VN</h1>
+        <p>Team trẻ cố gắng lên </p>
+        <form style="margin-left: auto; margin-right: auto; width: 60%;" class="form"> 
+           <div class="input-group" >
+             <input type="text" class="form-control" placeholder="Tìm kiếm">
+             <div class="input-group-btn">
+               <button class="btn btn-primary" type="submit"><span><i class="glyphicon glyphicon-search"></i></span>
+                 Seach
+               </button>
+             </div>
+           </div>
+         </form>
+   </div>
+   <!-- Gioi thiệu-->
+   <div class="container bg-warning">
+    <div class="row">
+        <div class="col-sm-8">
+    <h1>HỆ THỐNG ĐÀO TẠO LẬP TRÌNH VIÊN QUỐC TẾ APTECH</h1>
+    <br/>
+    <p>APTECH là tập đoàn của Ấn Độ đi tiên phong trong lĩnh vực đào tạo Công nghệ Thông tin (CNTT) trên thế giới. APTECH đã có hơn 32 năm kinh nghiệm triển khai chương trình đào tạo Lập trình viên Quốc tế tại hơn 40 Quốc gia với 1.300 cơ sở đào tạo và 6,8 triệu sinh viên.
+
+        Các cơ sở đào tạo của APTECH đều tuân thủ thống nhất quy trình đào tạo được cấp chứng chỉ ISO 9001. Sinh viên của APTECH được công nhận rộng rãi, đặc biệt ở những nước có nền công nghệ tiên tiến. Năm 2008, APTECH được trao danh hiệu Đơn vị hàng đầu Thế giới. Năm 1997 APTECH được trao giải The Global Growth Company Award của Diễn đàn Kinh tế Thế giới. Cuối năm 2000, APTECH được tạp chí FORBES xếp trong Top 300 công ty có tốc độ tăng trưởng và hiệu quả hoạt động tốt nhất. Trong nhiều năm liên tiếp, APTECH đạt danh hiệu Đơn vị đào tạo CNTT số 1 tại các nước có nền Công nghệ phát triển như Ấn Độ, Trung Quốc...</p>
+        <br/>
+        <button class="btn btn-danger" type="submit">
+            <span class="glyphicon glyphicon-earphone"></span> Liên hệ với chúng tôi
+          </button>   
+          </div> 
+          <div class="col-sm-4">
+              <span class="glyphicon glyphicon-globe logo slideanim"></span>
+          </div>
+    </div>  
+        
+</div>
+        <!-- Dịch Vụ -->
+       <div id="services" class="container-fluid text-center bg-danger " style="color: grey; margin-top: 30px;">
+        <h2>Dịch vụ</h2>
+        <h4>Các dịch vụ của chúng tôi bao gốm</h4>
+        <br/>
+        <div class="row slideanim">
+          <div class="col-sm-4">
+            <span class="glyphicon glyphicon-off logo-smail" style="font-size: 60px; color: royalblue;"></span>
+            <h4 style="font-weight: bold;">Elearing-Framework</h4>
+            <p>Phần mềm học trực tuyến</p>
+          </div>
+          <div class="col-sm-4">
+            <span class="glyphicon glyphicon-heart logo-smail" style="font-size: 60px;color: red;"></span>
+            <h4 style="font-weight: bold;">Phát triển website</h4>
+            <p>Phát triển website theo đơn đặt hàng</p>
+          </div>
+          <div class="col-sm-4">
+            <span class="glyphicon glyphicon-leaf logo-smail" style="font-size: 60px; color: seagreen;"></span>
+            <h4 style="font-weight: bold;">Hệ thống CRM</h4>
+            <p>Hệ thống quản trị khách hàng CRM</p>
+          </div>
+        </div>
+        <br/><br/>
+        <div class="row slideanim">
+          <div class="col-sm-4">
+            <span class="glyphicon glyphicon-off logo-smail" style="font-size: 60px; color: royalblue;"></span>
+            <h4 style="font-weight: bold;">Hệ thống phòng khám điện tử</h4>
+            <p>Xây dựng hệ thống phòng khám điện tử</p>
+          </div>
+          <div class="col-sm-4">
+            <span class="glyphicon glyphicon-heart logo-smail" style="font-size: 60px;color: red;"></span>
+            <h4 style="font-weight: bold;">Hệ thống quản lí thư viện</h4>
+            <p>Xây dựng hệ thống quản lý thư viện</p>
+          </div>
+          <div class="col-sm-4">
+            <span class="glyphicon glyphicon-leaf logo-smail" style="font-size: 60px; color: seagreen;"></span>
+            <h4 style="font-weight: bold;">Hệ thống quản lý kho hàng</h4>
+            <p>Xây dựng hệ thống quản lý kho hàng</p>
+          </div>
+        </div>
+           </div>
+      <!--dự án-->
+     <div id="portfolio" class="container-fluid text-center bg-grey" style="margin-top: 40px;">
+       <h2>Dự án tiêu biểu</h2>
+       <h4>Một trong số những dự án đã làm</h4>
+       <div class="row text-center slideanim">
+         <div class="col-sm-4">
+           <div class="thumbnail">
+             <img src="ảnh dự án 1.jpg" width="400px" height="300px">
+             <h4><strong>Dự án 1</strong></h4>
+           </div>
+         </div>
+         <div class="col-sm-4">
+          <div class="thumbnail">
+            <img src="Anh dự án 2.png" width="400px" height="300px">
+            <h4><strong>Dự án 2</strong></h4>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="thumbnail">
+            <img src="ảnh dự án 1.jpg" width="400px" height="300px">
+            <h4><strong>Dự án 3</strong></h4>
+          </div>
+        </div>
+       </div>
+     </div>
+
+     <!--Y kiến khách hàng-->
+     <h2 class="text-center" style="margin-bottom: 20px; margin-top: 30px;">Y kiến khách hàng</h2>
+     <div id="carouselExampleControls" class="carousel slide text-center" data-ride="carousel">
+       <ol class="carousel-indicators">
+         <li data-target = "#carouselExampleControls"data-slide-to="0" class="active"></li>
+         <li data-target = "#carouselExampleControls"data-slide-to="1" ></li>
+         <li data-target = "#carouselExampleControls"data-slide-to="2" ></li>
+       </ol>
+      <div class="carousel-inner" role="listbox">
+        <div class="item active">
+         <h4>Cảm ơn Apptech đã cho tôi một khóa học tuyêt vời</h4>
+        </div>
+        <div class="item">
+          <h4>Tôi rất vui được theo học tại Apptech</h4>
+        </div>
+        <div class="item">
+          <h4>Không gian học tập trẻ trung năng động</h4>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="right carousel-control" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+    </div>
+    <!-- Bảng giá khóa học-->
+       <div id = "money" class="container-fluid" style="margin-top: 30px;">
+         <div class="text-center">
+           <h2>Bảng giá các khóa học</h2>
+           <p>Chọn khóa học mà bạn muốn theo học</p>
+         </div>
+         <div class="row slideanim">
+           <div class="col-sm-4 col-xs-12">
+             <div class="panel panel-primary text-center">
+               <div class="panel-heading">
+                 <h1>C#</h1>
+               </div>
+               <div class="panel-body">
+                 <p><strong>5.000.000 VNĐ</strong></p>
+                 <p><strong>Học trong vòng 6 tháng từ cơ bản đến nâng cao</strong></p>
+               </div>
+               <div class="panel-footer">
+                 <button class="btn btn-danger">Đăng kí</button>
+               </div>
+             </div>
+           </div>
+           <div class="col-sm-4 col-xs-12">
+            <div class="panel panel-primary text-center">
+              <div class="panel-heading">
+                <h1>JavaScript</h1>
+              </div>
+              <div class="panel-body">
+                <p><strong>5.000.000 VNĐ</strong></p>
+                <p><strong>Học trong vòng 6 tháng từ cơ bản đến nâng cao</strong></p>
+              </div>
+              <div class="panel-footer">
+                <button class="btn btn-danger">Đăng kí</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4 col-xs-12">
+            <div class="panel panel-primary text-center">
+              <div class="panel-heading">
+                <h1>PHP</h1>
+              </div>
+              <div class="panel-body">
+                <p><strong>5.000.000 VNĐ</strong></p>
+                <p><strong>Học trong vòng 6 tháng từ cơ bản đến nâng cao</strong></p>
+              </div>
+              <div class="panel-footer">
+                <button class="btn btn-danger">Đăng kí</button>
+              </div>
+            </div>
+          </div>
+         </div>
+       </div>
+<br>
+<br>
+       <!-- Liên hệ-->
+       <div id = "contact" class="container-fluid bg-grey" style="margin-top: 30px;">
+         <h2 class="text-center">Liên hệ</h2>
+         <div class="row">
+           <div class="col-sm-5">
+             <p>Hãy liên hệ với chúng tôi , chúng tôi sẽ trả lời trong vòng 8 giờ</p>
+             <p><span class="glyphicon glyphicon-map-marker"></span> Thành phố Hà Nội</p>
+             <p><span class="glyphicon glyphicon-phone"></span> 012349999</p>
+             <p><span class="glyphicon glyphicon-envelope"></span> apptech@edu.vn</p>
+           </div>
+           <div class="col-sm-7 slideanim">
+             <div class="row">
+               <div class="col-sm-6 form-group">
+                 <input class="form-control" id="name" name="name" placeholder="Tên">
+               </div>
+               <div class="col-sm-6 form-group">
+                <input class="form-control" id="email" name="email" placeholder="email">
+              </div>
+             </div>
+             <textarea class="form-control" id="comment" name="comment" placeholder="Gửi yêu cầu bạn mong muốn"></textarea>
+             <div class="row">
+               <div class="col-sm-12 form-group" style="margin-top: 20px;">
+                 <button class="btn btn-primary btn-center" type="submit">Gửi yêu cầu</button>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+       <script>
+         $(document).ready(function(){
+           $(window).scroll(function(){
+             $('.slideanim').each(function(){
+              var pas = $(this).offset().top;
+             var winTop = $(window).scrollTop();
+             if(pas < winTop + 600){
+              $(this).addClass("slide")
+             }
+             
+             })
+             
+           });
+         });
+       </script>
+</body>
+</html>
